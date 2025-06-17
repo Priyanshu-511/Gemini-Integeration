@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Chat Integration</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; background: #f5f5f5; }
+    input, button { padding: 10px; font-size: 1rem; margin: 5px; }
+    #responseBox { white-space: pre-wrap; background: white; padding: 15px; border-radius: 5px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+
+  <h2>Ask the AI</h2>
+  <input type="text" id="userInput" placeholder="Enter your question..." size="50"/>
+  <button onclick="askAI()">Ask</button>
+
+  <div id="responseBox"></div>
+
+  <script>
+    async function askAI() {
+      const userPrompt = document.getElementById("userInput").value.trim();
+      if (!userPrompt) {
+        document.getElementById("responseBox").textContent = "Please enter a question.";
+        return;
+      }
+
+      document.getElementById("responseBox").textContent = "Loading...";
+
+      try {
+        const res = await axios.post('/api/ask', { prompt: userPrompt });
+        document.getElementById("responseBox").textContent = res.data.response;
+      } catch (err) {
+        console.error(err);
+        document.getElementById("responseBox").textContent =
+          "Error: " + (err.response?.data?.error || err.message || "Unknown error");
+      }
+    }
+
+    // Add Enter key listener
+    document.getElementById("userInput").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission if any
+        askAI(); // Trigger the same function as the button
+      }
+    });
+  </script>
+
+</body>
+</html>

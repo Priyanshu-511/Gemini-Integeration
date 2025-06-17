@@ -1,6 +1,6 @@
 # Gemini Integration 🚀
 
-A simple Node.js + EJS-based web application that integrates with **Gemini API (by Google)** to provide AI-powered chatbot interactions. This project demonstrates how to build a front-end UI for querying the Gemini API and displaying real-time LLM responses.
+A simple Node.js + HTML-based web application that integrates with **Gemini API (by Google)** to provide AI-powered chatbot interactions. This project demonstrates how to build a front-end UI for querying the Gemini API and displaying real-time LLM responses.
 
 ## 🔧 Features
 

@@ -4,7 +4,7 @@ A simple Node.js + HTML-based web application that integrates with **Gemini API 
 
 ## 🔧 Features
 
-- 🌐 Clean and responsive user interface using EJS
+- 🌐 Clean and responsive user interface using HTML
 - 🤖 Real-time integration with Gemini API for intelligent responses
 - 🗨️ User input textbox and dynamic response area
 - 📦 Organized codebase for easy expansion
@@ -12,7 +12,7 @@ A simple Node.js + HTML-based web application that integrates with **Gemini API 
 ## 🛠️ Tech Stack
 
 - **Backend**: Node.js, Express.js
-- **Frontend**: EJS, HTML, CSS, JavaScript
+- **Frontend**: HTML, HTML, CSS, JavaScript
 - **AI**: Gemini Pro API (via Google Generative AI)
 
 ## 🚀 Getting Started

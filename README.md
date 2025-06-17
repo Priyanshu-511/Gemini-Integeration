@@ -45,9 +45,7 @@ http://localhost:3000
 ## 5. Directories
 ```bash
 Gemini-Integeration/
-├── public/             # Static assets (CSS, JS)
-├── views/              # EJS templates
-│   ├── index.ejs       # Main chat interface
+├── public
 ├── server.js           # Main server file
 ├── .env                # Environment variables
 ├── package.json
